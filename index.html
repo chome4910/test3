@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asdf</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="#"><img src="img/icons8-나비-94.png" alt=""/></a></h1>
+            <div class="menu"><a href="#"><img src="img/icons8-메뉴-52.png" alt=""></a></div>
+        </div>
+    </header>
+    <main>
+        <section class="inner">
+            <div class="main_visual">
+                <img src="img/trees-g463371fca_1920.jpg" alt="">
+            </div><!-- ,main_visual end -->
+
+            <div class="cont01">
+                <figure>
+                    <div>
+                        <img id="photo1" src="img/flowers-gc221cf4a4_1920.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <div>
+                            <h3>[하동] 당일 #쌍계사10리벚꽃길<br/> #화개장터 #벚꽃여행</h3>
+                            <p>한국관광공사가 추천하는, 눈부신 4월의 설원과 같이 흩날리는 벚꽃의<br/> 쌍계사10리벚꽃길과 화개장터를 둘러보는 하동 당일 봄 여행 상품입니다.</p>
+                            <strong>41,900원~</strong>
+                            <span id="button1">다른이미지 보기</span>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <div class="text">
+                        <div>
+                            <h3>[제주] 핫플레이스 3일 <br/>#산양큰엉곶 #수목원야시장 <br/>#사려니숲길</h3>
+                            <p>레트로 감성의 미디어아트 노형슈퍼마켙을 비롯하여 사려니숲길 등 제주 핫플 관광지를 둘러봅니다. 제주 특유의 제주도 근고기 및 특식을 즐기실 수 있습니다.</p>
+                            <strong>319,000원~</strong>
+                            <span id="button2">다른이미지 보기</span>    
+                        </div>
+                    </div><!-- .text end -->
+                    <div>
+                        <img id='photo2' src="img/flowers-g9ca53e382_1920.jpg" alt="">
+                    </div>
+                    
+                </figure>
+
+            </div><!-- .cont01 end -->
+
+            <div class="cont02">
+                <div class="inner">
+                    <div class="image">
+                        <img id="img0" src="img/bridge-gb8aceca1a_1920.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>꿈을 담은 특별한 여행</h2>
+                        <p>떠나고 싶은 마음에게 쉽게 답을 드리는<br/>
+                            여행이지와 함께 특별한 경험을 시작하세요.</p>
+                        <button id="photo_btn">이미지보기<span id="count">1</span>/3</button>
+                    </div><!-- .text end -->
+                </div><!-- .inner end -->
+            
+            </div><!-- .cont end -->
+            
+        </section><!-- .inner end -->
+    </main>
+
+    <script>
+
+        let img_btn1 = document.getElementById('button1');
+        let img_btn2 = document.getElementById('button2');
+        let img_btn3 = document.getElementById('photo_btn');
+        let img1 = document.getElementById('photo1');
+        let img2 = document.getElementById('photo2');
+        let img3 = document.getElementById('slide_img');
+        let img_count = document.getElementById('count');
+        let i = 0;
+        let image0 = 'img/bridge-gb8aceca1a_1920.jpg';
+        let image1 = 'img/japan-g0779a70fa_1920.jpg';
+        let image2 = 'img/adult-g68ced76e4_1920.jpg';
+        let image_list=[image0,image1,image2];
+
+
+
+        img_btn1.onmouseover = function(){
+            img1.src = 'img/road-gd58a1feb2_1920.jpg'
+            img1.style.scale = '0.8'
+            img1.style.transition = '1s'
+        }
+
+        img_btn1.onmouseleave = function(){
+            img1.src = 'img/flowers-gc221cf4a4_1920.jpg'
+            img1.style.scale = '1'
+            img1.style.transition = '1s'
+
+        }
+
+        img_btn2.onmouseover = function(){
+            img2.src = 'img/cherry-blossoms-gefaedc28a_1920.jpg'
+            img2.style.scale = '0.8'
+            img2.style.transition = '1s'
+        }
+
+        img_btn2.onmouseleave = function(){
+            img2.src = 'img/flowers-g9ca53e382_1920.jpg'
+            img2.style.scale = '1'
+            img2.style.transition = '1s'
+
+        }
+
+        img_btn3.onclick = function(){
+            i++;
+            if(i >= image_list.length){
+                i=0
+            }
+            img_count.innerText = i+1
+            img0.src = image_list[i]
+
+        }
+
+
+    </script>
+</body>
+</html>
